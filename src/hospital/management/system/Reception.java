@@ -55,6 +55,7 @@ public class Reception extends JFrame {
                 new Room();
              }
         });
+
         JButton btn3 = new JButton("Department");
         btn3.setBounds(30,100,200,30);
         btn3.setBackground(new Color(246,215,118));

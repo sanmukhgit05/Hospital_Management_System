@@ -9,7 +9,6 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 public class Department extends JFrame {
-
     Department(){
 
         JPanel panel = new JPanel();
@@ -19,31 +18,32 @@ public class Department extends JFrame {
         add(panel);
 
         JTable table = new JTable();
+        table.setBounds(0,40,700,350);
         table.setBackground(new Color(90, 156, 163));
         table.setFont(new Font("Tahoma",Font.BOLD,14));
         panel.add(table);
 
-        try {
+        try{
             conn c = new conn();
-            String q = "select * from Department ";
+            String q = "select * from department";
             ResultSet resultSet = c.statement.executeQuery(q);
             table.setModel(DbUtils.resultSetToTableModel(resultSet));
-
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
 
         JLabel label1 = new JLabel("Department");
-        label1.setBounds(45,11,105,20);
+        label1.setBounds(145,11,105,20);
         label1.setFont(new Font("Tahoma",Font.BOLD,14));
         panel.add(label1);
 
         JLabel label2 = new JLabel("Phone Number");
-        label2.setBounds(351,11,150,20);
+        label2.setBounds(431,11,150,20);
         label2.setFont(new Font("Tahoma",Font.BOLD,14));
         panel.add(label2);
 
         JButton b1 = new JButton("BACK");
+        b1.setBounds(400,410,130,30);
         b1.setBackground(Color.black);
         b1.setForeground(Color.white);
         panel.add(b1);
@@ -62,8 +62,7 @@ public class Department extends JFrame {
 
     }
 
-public static void main(String[] args) {
-    new Department();
+    public static void main(String[] args) {
+        new Department();
+    }
 }
-}
-

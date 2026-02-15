@@ -7,19 +7,19 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.util.Date;
 
-public class NEW_PATIENT extends JFrame implements ActionListener  {
+public class NEW_PATIENT extends JFrame implements ActionListener {
     JComboBox comboBox;
     JTextField textFieldNumber, textName, textFieldDisease, textFieldDeposite;
     JRadioButton r1, r2;
     Choice c1;
     JLabel date;
-    JButton b1, b2;
-
+    JButton b1 ,b2;
 
     NEW_PATIENT(){
 
         JPanel panel = new JPanel();
-        panel.setBackground(new Color(98,156,163));
+        panel.setBounds(5,5,840,540);
+        panel.setBackground(new Color(90, 156, 163));
         panel.setLayout(null);
         add(panel);
 
@@ -27,17 +27,17 @@ public class NEW_PATIENT extends JFrame implements ActionListener  {
         Image image = imageIcon.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
         ImageIcon imageIcon1 = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon1);
-        label.setBounds(550, 150,200,200);
+        label.setBounds(550,150,200,200);
         panel.add(label);
 
         JLabel labelName = new JLabel("NEW PATIENT FORM");
-        labelName.setBounds(118,11,260,67 );
+        labelName.setBounds(118,11,260,53);
         labelName.setFont(new Font("Tahoma",Font.BOLD,20));
         panel.add(labelName);
 
-        JLabel labelID = new JLabel("ID : ");
-        labelID.setBounds(35,76,200,24 );
-        labelID.setFont(new Font("Tahoma",Font.BOLD,16));
+        JLabel labelID = new JLabel("ID :");
+        labelID.setBounds(35,76,200,14);
+        labelID.setFont(new Font("Tahoma",Font.BOLD,14));
         labelID.setForeground(Color.white);
         panel.add(labelID);
 
@@ -114,7 +114,6 @@ public class NEW_PATIENT extends JFrame implements ActionListener  {
         }catch (Exception e){
             e.printStackTrace();
         }
-
         c1.setBounds(271,274,150,20);
         c1.setFont(new Font("Tahoma", Font.BOLD, 14));
         c1.setForeground(Color.WHITE);
@@ -159,11 +158,12 @@ public class NEW_PATIENT extends JFrame implements ActionListener  {
         b2.addActionListener(this);
         panel.add(b2);
 
-        setUndecorated(true); // it will romove the panel of the box
+        setUndecorated(true);
         setSize(850,550);
         setLayout(null);
         setLocation(300,250);
         setVisible(true);
+
     }
 
     @Override
@@ -176,10 +176,9 @@ public class NEW_PATIENT extends JFrame implements ActionListener  {
             }else if (r2.isSelected()){
                 radioBTN = "Female";
             }
-
             String s1 = (String)comboBox.getSelectedItem();
+            String s3 =  textFieldNumber.getText();
             String s2 =  textName.getText();
-            String s3 = textFieldNumber.getText();
             String s4 =  radioBTN;
             String s5 =  textFieldDisease.getText();
             String s6 =  c1.getSelectedItem();
@@ -201,9 +200,13 @@ public class NEW_PATIENT extends JFrame implements ActionListener  {
         }else {
             setVisible(false);
         }
+
+
     }
 
     public static void main(String[] args) {
         new NEW_PATIENT();
     }
+
+
 }
