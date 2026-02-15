@@ -19,7 +19,6 @@ public class NEW_PATIENT extends JFrame implements ActionListener  {
     NEW_PATIENT(){
 
         JPanel panel = new JPanel();
-        panel.setBounds(5,5,840,538);
         panel.setBackground(new Color(98,156,163));
         panel.setLayout(null);
         add(panel);

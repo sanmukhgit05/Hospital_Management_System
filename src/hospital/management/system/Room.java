@@ -14,7 +14,6 @@ public class Room extends JFrame {
 Room(){
 
     JPanel panel = new JPanel();
-    panel.setBounds(5,5,890,490);
     panel.setBackground(new Color(90,156,163));
     panel.setLayout(null);
     add(panel);
@@ -27,7 +26,6 @@ Room(){
     panel.add(label);
 
     table = new JTable();
-    table.setBounds(10,40,500,350);
     table.setBackground(new Color(90,156,163));
     table.setFont(new Font("Tahoma",Font.BOLD,14));
     panel.add(table);
@@ -59,7 +57,6 @@ Room(){
     panel.add(label4);
 
     JButton back = new JButton(" Back ");
-    back.setBounds(200,400,120,30);
     back.setBackground(Color.BLACK);
     back.setForeground(Color.white);
     panel.add(back);

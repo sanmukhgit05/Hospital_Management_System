@@ -19,7 +19,6 @@ public class Department extends JFrame {
         add(panel);
 
         JTable table = new JTable();
-        table.setBounds(5,40,700,350);
         table.setBackground(new Color(90, 156, 163));
         table.setFont(new Font("Tahoma",Font.BOLD,14));
         panel.add(table);
@@ -45,7 +44,6 @@ public class Department extends JFrame {
         panel.add(label2);
 
         JButton b1 = new JButton("BACK");
-        b1.setBounds(350,410,130,30);
         b1.setBackground(Color.black);
         b1.setForeground(Color.white);
         panel.add(b1);
