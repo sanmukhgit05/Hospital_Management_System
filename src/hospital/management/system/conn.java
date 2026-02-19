@@ -1,4 +1,4 @@
-package hospital.management.system;
+ package hospital.management.system;
 
 import java.sql.Connection;
 import java.sql.Statement;
